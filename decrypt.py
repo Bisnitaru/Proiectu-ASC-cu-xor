@@ -17,7 +17,7 @@ def decrypt(bytesOfLenKey, key):
 
     for i in ['0' * (10 - len(bin(ord(a) ^ ord(b)))) + bin(ord(a) ^ ord(b))[2:] for a, b in
               zip(bytesOfLenKeyPls, keyPls)]:
-        encrypted_text += i + ' ' # aici e o mica modificare
+        encrypted_text += i # aici e o mica modificare
     return encrypted_text''' # si aici
 # am modificat putin si encryptul tau, pentru ca aveam nevoie
 # de split() la decriptare
