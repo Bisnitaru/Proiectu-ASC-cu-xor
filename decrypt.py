@@ -4,9 +4,7 @@ from textwrap import wrap
 def decrypt(bytesOfLenKey, key):
     decrypted_text = ""
     for x, y in zip(wrap(bytesOfLenKey, 8), wrap(key, 8)):
-        character = (bin(int(x, base=2) ^ int(y, base=2))[2::])
-        if chr(int(character, base=2)) != '\0':
-            decrypted_text += chr(int(character, base=2))
+        decrypted_text += chr((int(x, base=2) ^ int(y, base=2)))
     return decrypted_text
 
 

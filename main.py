@@ -6,8 +6,8 @@ def encrypt(bytesOfLenKeyPls, keyPls):
     if len(bytesOfLenKeyPls) < len(keyPls):
         bytesOfLenKeyPls = '\0' * (len(keyPls) - len(bytesOfLenKeyPls)) + bytesOfLenKeyPls
 
-    for i in ['0' * (10 - len(bin(ord(a) ^ ord(b)))) + bin(ord(a) ^ ord(b))[2:] for a, b in
-              zip(bytesOfLenKeyPls, keyPls)]:
+    for i in ['0' * (10 - len(bin(ord(a) ^ ord(b)))) + bin(ord(a) ^ ord(b))[2:] for a, b in zip(bytesOfLenKeyPls, keyPls)]:
+              
         encrypted_text += i
     return encrypted_text
 
@@ -15,17 +15,13 @@ def encrypt(bytesOfLenKeyPls, keyPls):
 def decrypt(bytesOfLenKey, key):
     decrypted_text = ""
     for x, y in zip(wrap(bytesOfLenKey, 8), wrap(key, 8)):
-        character = (bin(int(x, base=2) ^ int(y, base=2))[2::])
-        if chr(int(character, base=2)) != '\0':
-            decrypted_text += chr(int(character, base=2))
+        decrypted_text += chr((int(x, base=2) ^ int(y, base=2)))
     return decrypted_text
 
 
-print("Introduceti cheia pentru criptare:", end=" ")
-key = input()
-# key = "4RyAZ9aJ7m5s"
-print("Introduceti textul pe care doriti sa-l criptati:", end=" ")
-text_to_encrypt = input()
+key = input("Introduceti cheia pentru criptare:")
+# key = "4RyAZ9aJ7m"
+text_to_encrypt = input("Introduceti textul pe care doriti sa-l criptati:")
 key_length = len(key)
 text_length = len(text_to_encrypt)
 encrypted_text = ""
