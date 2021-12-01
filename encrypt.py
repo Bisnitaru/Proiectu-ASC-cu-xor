@@ -14,7 +14,7 @@ def encrypt(bytearrayCuBytesLenKeyPls, keyPls):
 while 1:
     b=bytearray(g.read(10))
     if b != b'':
-        encrypt(b, '4RyAZ9aJ7m')
+        encrypt(b, 'key???')
             
     else:
         break
