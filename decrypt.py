@@ -10,6 +10,6 @@ def decrypt(bytearrayCuBytesLenKeyPls, keyPls):
 while 1:
     b = bytearray(g.read(10))
     if b != b'':
-        decrypt(b, 'ZUXUv6T6sb')
+        decrypt(b, 'key???')
     else:
         break
