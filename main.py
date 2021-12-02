@@ -1,5 +1,3 @@
-from textwrap import wrap
-
 f = open('output.txt', 'wb')
 g = open('input.txt', 'rb')
 
@@ -22,8 +20,8 @@ while 1:
 f.close()
 g.close()
 
-h = open("output.txt", 'rb')
-m = open("input_recuperat.txt", 'wb')
+h = open('output.txt', 'rb')
+m = open('input_recuperat.txt', 'wb')
 
 while 1:
     a = bytearray(h.read(10))
