@@ -13,7 +13,7 @@ def encrypt(bytearrayCuBytesLenKeyPls, keyPls):
 while 1:
     b = bytearray(g.read(10))
     if b != b'':
-        encrypt(b, 'ZUXUv6T6sb')
+        encrypt(b, 'key???')
     else:
         break
 
@@ -26,7 +26,7 @@ m = open('input_recuperat.txt', 'wb')
 while 1:
     a = bytearray(h.read(10))
     if a != b'':
-        decrypt(a, 'ZUXUv6T6sb')
+        decrypt(a, 'key???')
     else:
         break
 
