@@ -1,3 +1,8 @@
 # Proiectu-ASC-cu-xor
-noi facem terma de proiect asa cum se face ca sa luam nota mare
->~~Sa nu va uitati in commituri ca sigur nu am pus cheia din greseala acolo.~~
+>***Echipa adversa --> power rangers***
+
+>**Noi ---> c0d3 8234k325**
+
+Cheia adversarilor : RMF14e2o2i5Mk
+
+# Prima parte
