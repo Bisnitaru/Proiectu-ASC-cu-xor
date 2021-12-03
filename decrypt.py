@@ -1,15 +1,17 @@
-f = open('input_recuperat.txt','wb')
-g = open('output.txt','rb')
+import sys
 
+f=open(sys.argv[3],'wb')
+g=open(sys.argv[1],'rb')
 
-def decrypt(bytearrayCuBytesLenKeyPls, keyPls):
-    for i in [(a ^ ord(b)) for a, b in zip(bytearrayCuBytesLenKeyPls, keyPls)]:
+def encrypt(bytearrayCuBytesLenKeyPls, keyPls):
+
+    for i in [(a ^ ord(b)) for a, b in zip(bytearrayCuBytesLenKeyPls , keyPls)]:
         f.write(i.to_bytes(1, 'big'))
 
-
 while 1:
-    b = bytearray(g.read(10))
+    b=bytearray(g.read(len(sys.argv[2])))
     if b != b'':
-        decrypt(b, 'key???')
+        encrypt(b, sys.argv[2])
+            
     else:
         break
